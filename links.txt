@@ -1,0 +1,3 @@
+* JS/HTML/JSON/JSONP Beautifier - https://github.com/MakingOddEdit/CodeBeautify (http://jsbeautifier.org/)
+* SQL Beautifier                - https://github.com/sqlparser/sql-pretty-printer/wiki/SQL-FaaS-API-manual
+* Text Diff                     - https://github.com/cemerick/jsdifflib
