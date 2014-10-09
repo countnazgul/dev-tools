@@ -1,3 +1,5 @@
+chrome.app.window.current().maximize();
+
 $(document).ready(function() {
   $(".navbar-item").click(function() {
       $(".navbar-item").removeClass("navbar-item-selected");
