@@ -4,10 +4,13 @@
   "short_name": "DevTools",
   "description": "Description for DevTools",
 
-  "version": "0.0.2",
+  "version": "0.0.3",
 
   "icons": {
     "16": "assets/icon_16.png",
+    "19": "assets/icon_19.png",
+    "38": "assets/icon_38.png",
+    "48": "assets/icon_48.png",
     "128": "assets/icon_128.png"
   },
 
