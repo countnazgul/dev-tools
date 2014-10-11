@@ -8,7 +8,14 @@
     <link rel="stylesheet" href="assets/css/checkbox.css" />
     <link rel="stylesheet" href="assets/css/button.css" />
     <link rel="stylesheet" href="assets/css/select.css" />
+    <link rel="stylesheet" href="assets/css/codemirror.css" />
+  	<link rel="stylesheet" type="text/css" href="assets/css/diffview.css"/>
+  	<script type="text/javascript" src="assets/js/diffview.js"></script>
+  	<script type="text/javascript" src="assets/js/difflib.js"></script>
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/beautify.js"></script>
+    <script type="text/javascript" src="assets/js/beautify-html.js"></script>
+    <script type="text/javascript" src="assets/js/codemirror.js"></script>
     <!-- <script type="text/javascript" src="assets/js/store_json2.min.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
   </head>
@@ -17,7 +24,7 @@
     	<div id="navbar-content-title">Tools</div>
     	<ul id="navbar">
     	  <li id="difftext" class="navbar-item navbar-item-selected">Diff Text</li>
-    		<li id="jsbeauty" class="navbar-item">JS Beautifier</li>
+    		<li id="jsbeauty" class="navbar-item">JS/HTML/JSON Beautifier</li>
     		<li id="sqlbeauty" class="navbar-item">SQL Beautifier</li>
     	</ul>
     </div>
@@ -26,11 +33,33 @@
     		<div id="page-container">
 
     			<div id="difftextPage" class="page" style="display:block">
-    				<h1>Diff Text</h1>
+            <h1>Diff Text</h1>
+          	<div class="top">
+          		<input type="text" id="contextSize" value="" style="display: none"/>
+          	</div>
+          	<div class="textInput">
+          		<h2>Base Text</h2>
+          		<textarea id="baseText"></textarea>
+          	</div>
+          	<div class="textInput spacer">
+          		<h2>New Text</h2>
+          		<textarea id="newText"></textarea>
+          	</div>
+          	<div class="viewType">
+          		<input type="radio" id="_viewtype1" name="_viewtype" id="sidebyside" /> <label for="sidebyside">Side by Side Diff</label>
+          		&nbsp; &nbsp;
+          		<input type="radio" id="_viewtype2" name="_viewtype" id="inline" /> <label for="inline">Inline Diff</label>
+          	</div>
+          	<div id="diffoutput"> </div>
     			</div>
 
     			<div id="jsbeautyPage" class="page">
-    				<h1>JS Beautifier</h1>
+    				<h1>JS/HTML/JSON Beautifier</h1>
+    				<div class="textInput" style="width: 100%">
+    				  <br/>
+          		<textarea id="beautifyText"></textarea>
+          		<button type="button" id="beautify">Beautify!</button>
+          	</div>
     			</div>
 
     			<div id="sqlbeautyPage" class="page">
