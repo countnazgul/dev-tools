@@ -16,6 +16,7 @@ $(document).ready(function() {
     diffUsingJS(0);
   });
 
+var options = '';
   $('#beautify').on('click', function(){
     data = $('#beautifyText').val();
     options = { brace_style: "collapse",
@@ -49,6 +50,22 @@ $(document).ready(function() {
     //                 });
     //codeEditor.focus();
     //codeEditor.setValue('{ brace_style: "collapse",break_chained_methods: false,end_with_newline: false,indent_char: " "}');
+  });
+
+
+  $('#toCSV').on('click', function(){
+    csv = $('#papaParse').val();
+    csv = csv.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ');
+    csv = Papa.unparse(csv);
+    $('#papaParse').val(csv);
+  });
+
+  $('#toJSON').on('click', function(){
+    csv = $('#papaParse').val();
+    csv = Papa.parse(csv, {header: true});
+    csv = JSON.stringify(csv.data);
+    csv = js_beautify(csv, options);
+    $('#papaParse').val(csv);
   });
 
 });

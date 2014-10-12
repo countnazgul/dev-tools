@@ -16,6 +16,7 @@
     <script type="text/javascript" src="assets/js/beautify.js"></script>
     <script type="text/javascript" src="assets/js/beautify-html.js"></script>
     <script type="text/javascript" src="assets/js/codemirror.js"></script>
+    <script type="text/javascript" src="assets/js/papaparse.js"></script>
     <!-- <script type="text/javascript" src="assets/js/store_json2.min.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
   </head>
@@ -26,6 +27,8 @@
     	  <li id="difftext" class="navbar-item navbar-item-selected">Diff Text</li>
     		<li id="jsbeauty" class="navbar-item">JS/HTML/JSON Beautifier</li>
     		<li id="sqlbeauty" class="navbar-item">SQL Beautifier</li>
+    		<li id="json2csv" class="navbar-item">JSON <--> CSV</li>
+    		<li id="json2xml" class="navbar-item">JSON <--> XML</li>
     	</ul>
     </div>
     <div id="mainview">
@@ -64,6 +67,13 @@
 
     			<div id="sqlbeautyPage" class="page">
     				<h1>SQL Beautifier</h1>
+    			</div>
+
+    		  <div id="json2csvPage" class="page">
+    				<h1>JSON <--> CSV</h1>
+    				<textarea id="papaParse"></textarea>
+            <button type="button" id="toCSV">to CSV</button>
+            <button type="button" id="toJSON">to JSON</button>
     			</div>
 
     			</div>
