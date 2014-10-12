@@ -1,4 +1,5 @@
 * JS/HTML/JSON/JSONP Beautifier - https://github.com/MakingOddEdit/CodeBeautify (http://jsbeautifier.org/)
+* XML, JSON, CSS and SQL        - https://github.com/vkiryukhin/vkBeautify
 * SQL Beautifier                - https://github.com/sqlparser/sql-pretty-printer/wiki/SQL-FaaS-API-manual
 * Text Diff                     - https://github.com/cemerick/jsdifflib
 * JSON <--> CSV                 - http://papaparse.com

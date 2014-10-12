@@ -68,6 +68,32 @@ var options = '';
     $('#papaParse').val(csv);
   });
 
+  $('#toXML').on('click', function(){
+    var x2js = new X2JS();
+    jsonObj = $('#json2xml1').val();
+    jsonObj = jsonObj.replace(/'/g, '"');
+    jsonObj = jsonObj.replace(/(['"])?([a-zA-Z0-9_]+)(['"])?:/g, '"$2": ');
+    jsonObj = jsonObj.replace(/(['"])?([a-zA-Z0-9_]+)(['"])? :/g, '"$2": ');
+    jsonObj = JSON.parse(jsonObj);
+    var xmlAsStr = x2js.json2xml_str( jsonObj );
+    xmlAsStr = vkbeautify.xml(xmlAsStr);
+    $('#json2xml1').val(xmlAsStr); //
+  });
+
+  $('#toJSON1').on('click', function(){
+    var x2js = new X2JS();
+    jsonObj = $('#json2xml1').val();
+    jsonObj = x2js.xml_str2json( jsonObj );
+    xmlAsStr = vkbeautify.json(jsonObj);
+    $('#json2xml1').val(xmlAsStr); //
+  });
+
+  $('#sqlbeautify').on('click', function(){
+    sqlText = $('#sqlBeautifier').val();
+    sqlText = vkbeautify.sql(sqlText);
+    $('#sqlBeautifier').val(sqlText); //
+  });
+
 });
 
 function looks_like_html(source) {

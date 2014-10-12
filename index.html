@@ -17,6 +17,8 @@
     <script type="text/javascript" src="assets/js/beautify-html.js"></script>
     <script type="text/javascript" src="assets/js/codemirror.js"></script>
     <script type="text/javascript" src="assets/js/papaparse.js"></script>
+    <script type="text/javascript" src="assets/js/xml2json.js"></script>
+    <script type="text/javascript" src="assets/js/vkbeautify.js"></script>
     <!-- <script type="text/javascript" src="assets/js/store_json2.min.js"></script> -->
     <script type="text/javascript" src="main.js"></script>
   </head>
@@ -67,6 +69,8 @@
 
     			<div id="sqlbeautyPage" class="page">
     				<h1>SQL Beautifier</h1>
+    				<textarea id="sqlBeautifier"></textarea>
+            <button type="button" id="sqlbeautify">Beautify!</button>
     			</div>
 
     		  <div id="json2csvPage" class="page">
@@ -74,6 +78,13 @@
     				<textarea id="papaParse"></textarea>
             <button type="button" id="toCSV">to CSV</button>
             <button type="button" id="toJSON">to JSON</button>
+    			</div>
+
+    		  <div id="json2xmlPage" class="page">
+    				<h1>JSON <--> XML</h1>
+    				<textarea id="json2xml1"></textarea>
+            <button type="button" id="toXML">to XML</button>
+            <button type="button" id="toJSON1">to JSON</button>
     			</div>
 
     			</div>
